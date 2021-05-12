@@ -1,4 +1,4 @@
-package android.src.main.java.com.payne.gp_admob;
+package com.payne.gp_admob;
 
 import android.app.Activity;
 import android.content.Context;

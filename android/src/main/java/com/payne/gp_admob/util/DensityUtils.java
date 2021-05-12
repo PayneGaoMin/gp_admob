@@ -1,4 +1,4 @@
-package android.src.main.java.com.payne.gp_admob.util;
+package com.payne.gp_admob.util;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

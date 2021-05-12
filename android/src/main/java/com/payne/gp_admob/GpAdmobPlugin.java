@@ -1,8 +1,22 @@
 package com.payne.gp_admob;
 
-import androidx.annotation.NonNull;
+import android.app.Activity;
 
+import androidx.annotation.NonNull;
+import androidx.core.util.Consumer;
+
+import com.mob.adsdk.AdSdk;
+import com.payne.gp_admob.util.DensityUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import io.flutter.app.FlutterApplication;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
+import io.flutter.plugin.common.BinaryMessenger;
+import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -27,7 +41,7 @@ public class GpAdmobPlugin implements FlutterPlugin, MethodCallHandler , Activit
   }
 
   public static void registerWith(Registrar registrar) {
-    MobadPlugin plugin = new MobadPlugin();
+    GpAdmobPlugin plugin = new GpAdmobPlugin();
     plugin.mApp = (FlutterApplication) registrar.context().getApplicationContext();
     plugin.mBinaryMessenger = registrar.messenger();
     plugin.mMethodChannel = new MethodChannel(registrar.messenger(), "com.mob.adsdk/method");
